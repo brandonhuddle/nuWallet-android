@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.nuwallet.android.currencies.Wallet;
-import io.nuwallet.android.currencies.iota.IOTAWallet;
+import io.nuwallet.android.currencies.raiblocks.RaiBlocksWallet;
 
 public class AllWalletsFragment extends Fragment {
     private OnAllWalletsFragmentInteractionListener mListener;
@@ -44,7 +44,7 @@ public class AllWalletsFragment extends Fragment {
         Context context = walletsList.getContext();
         walletsList.setLayoutManager(new LinearLayoutManager(context));
         List<Wallet> tmp = new ArrayList<Wallet>();
-        tmp.add(new IOTAWallet("Main Wallet"));
+        tmp.add(new RaiBlocksWallet("Main Wallet"));
         walletsList.setAdapter(new AllWalletsAdapter(tmp, mListener));
 
         return view;

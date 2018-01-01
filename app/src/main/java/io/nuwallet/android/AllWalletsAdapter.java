@@ -32,7 +32,7 @@ public class AllWalletsAdapter extends RecyclerView.Adapter<AllWalletsAdapter.Vi
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.mWalletName.setText(mValues.get(position).getName());
-        holder.mWalletBalance.setText(mValues.get(position).getBalance(Currency.IOTA));
+        holder.mWalletBalance.setText(mValues.get(position).getBalance(Currency.RaiBlocks));
 
         CardView cardView = holder.mView.findViewById(R.id.card_view);
         cardView.setOnClickListener(new View.OnClickListener() {
